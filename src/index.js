@@ -17,15 +17,13 @@ import { takeEvery, put } from 'redux-saga/effects';
 import cron from 'node-cron';
 
 
-
-
 // Cron can be used to schedule tasks
 // second, minute, hour, day of month, month, day of week
 
 cron.schedule('*/1 * * * * *', () => {
     console.log('Running this task every 1 seconds');
 }, {
-        scheduled: false,
+        scheduled: true,
         timezone: "America/Sao_Paulo"
     });
 
